@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FrekisFramework"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.3"
   spec.summary      = "A short description of FrekisFramework."
 
   # This description is used to generate tags and improve search results.
@@ -67,7 +67,8 @@ Pod::Spec.new do |spec|
 
   # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
-
+  spec.ios.deployment_target = "10.1"
+  spec.swift_version = "4.0"
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
@@ -91,9 +92,10 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  # spec.source_files  = "FrekisFramework/**/*"
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -135,5 +137,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-
+ spec.dependency 'NotificationBannerSwift', '~> 3.0.0'
+ spec.dependency 'FMDB'
 end
